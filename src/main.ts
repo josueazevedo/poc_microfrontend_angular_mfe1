@@ -9,7 +9,7 @@ import { createCustomElement } from '@angular/elements';
 import 'zone.js';
 import { MFE_CONFIG } from './app/config/mfe.config';
 
-if (isDevMode()) {
+if (!isDevMode()) {
   bootstrapApplication(AppComponent, appConfig).catch((err) =>
     console.error(err)
   );

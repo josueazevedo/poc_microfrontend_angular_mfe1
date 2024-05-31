@@ -35,4 +35,14 @@ export class AppComponent implements OnChanges {
       ROUTES_LIST.HOME;
     return path;
   }
+
+  public tt() {
+    document.dispatchEvent(
+      new CustomEvent('loading', {
+        detail: {
+          show: true,
+        },
+      })
+    );
+  }
 }
