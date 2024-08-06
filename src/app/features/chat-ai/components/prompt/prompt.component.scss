@@ -1,0 +1,75 @@
+@import "../../../../../assets/css/color.scss";
+
+.c-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    gap: 16px;
+
+    &--user {
+      align-self: flex-end;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: $primary;
+      width: 60%;
+    }
+
+    &--bot {
+      align-self: flex-start;
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  &__input {
+  }
+}
+
+.c-code {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary;
+    padding: 8px;
+    border-radius: 5px 5px 0 0;
+  }
+}
+
+.chat-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 700px;
+  margin: 0 auto;
+  border: solid 1px $primary;
+  padding: 8px;
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    &__code {
+    }
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

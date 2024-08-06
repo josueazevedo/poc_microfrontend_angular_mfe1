@@ -24,7 +24,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss"
+            ],
             "scripts": [],
             "outputHashing": "none"
           },
@@ -48,6 +51,14 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/main.ts",
+                  "with": "src/main.local.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -63,6 +74,9 @@
             },
             "development": {
               "buildTarget": "mfe-flow-one:build:development"
+            },
+            "local": {
+              "buildTarget": "mfe-flow-one:build:local"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +94,10 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "styles": [
+              "@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss"
+            ],
             "scripts": []
           }
         }

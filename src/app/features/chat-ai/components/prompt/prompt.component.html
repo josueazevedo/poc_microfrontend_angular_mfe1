@@ -1,0 +1,26 @@
+<section class="c-card">
+  <div class="c-card__messages">
+    <div
+      *ngFor="let message of messages"
+      [ngClass]="{
+        'c-card__messages--user': message.isUser,
+        'c-card__messages--bot': !message.isUser
+      }"
+    >
+      <div class="c-code" *ngIf="!message.isUser">
+        <div class="c-code__bar">
+          <p>Javascript</p>
+          <a href="#">Copiar</a>
+        </div>
+        <pre><code [highlightAuto]="message.text"></code></pre>
+      </div>
+      <div class="c-text" *ngIf="message.isUser">
+        <pre>{{ message.text }}</pre>
+      </div>
+    </div>
+  </div>
+  <div class="c-card__input">
+    <input [(ngModel)]="userInput" placeholder="Type your message" />
+    <button>Send</button>
+  </div>
+</section>

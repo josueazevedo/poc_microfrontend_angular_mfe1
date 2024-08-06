@@ -20,7 +20,7 @@ export class CustomLocationStrategyService extends PathLocationStrategy {
 
   override prepareExternalUrl(internal: string): string {
     let path = super.prepareExternalUrl(internal);
-    path = path.replace(/\/\((\w+):(\w+)\)/, '/$1/$2').replace('(', '');
+    path = path.replace(/\/\((\w+):([^\)]+)\)/, '/$1/$2');
     const url = this.url.parse(path);
     return url.toString();
   }

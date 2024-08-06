@@ -49,7 +49,7 @@ export class NavigateService {
   }
 
   private registreNavigateExternalRouter(): void {
-    this.router.errorHandler = () => {};
+    // this.router.errorHandler = () => {};
     this.router.events
       .pipe(filter((e) => e instanceof NavigationError))
       .subscribe((e) => {
