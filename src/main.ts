@@ -17,11 +17,3 @@ import { MFE_CONFIG } from './app/config/mfe.config';
   });
   customElements.define(MFE_CONFIG.tag, myCustomElement);
 })();
-
-// const run = () => {
-//   bootstrapApplication(AppComponent, appConfig).catch((err) =>
-//     console.error(err)
-//   );
-// };
-
-// run();
